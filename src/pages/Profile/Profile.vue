@@ -1,23 +1,12 @@
 <template>
-  <section class="profile">
+  	<section class="profile">
 		<HeaderTop title="我的"/>   
 		<section class="profile-number">
 			<router-link to="/login" class="profile-link">
-				<div class="profile_image">
-				<i class="iconfont icon-person"></i>
-				</div>
 				<div class="user-info">
 					<p class="user-info-top">登录/注册</p>
-					<p>
-						<span class="user-icon">
-							<i class="iconfont icon-shouji icon-mobile"></i>
-						</span>
-						<span class="icon-mobile-number">暂无绑定手机号</span>
-					</p>
+					<p class="icon-mobile-number">暂无绑定手机号</p>
 				</div>
-				<span class="arrow">
-					<i class="iconfont icon-jiantou1"></i>
-				</span>
 			</router-link>
 		</section>
 
@@ -89,7 +78,7 @@
 			</a>
 		</section>
 
-  </section>
+  	</section>
 
 </template>
 
@@ -105,89 +94,47 @@
 
 <style lang="stylus" rel="stylesheet/stylus">
   	@import "../../common/stylus/mixins.styl"
-
-	.profile //我的
+		*
+			margin 0px
+			padding 0px
+		a
+			text-decoration none
+		.profile //我的
 			width 100%
 			overflow hidden
-		.header
-			background-color #02a774
-			position fixed
-			z-index 100
-			left 0
-			top 0
-			width 100%
-			height 45px
-			.header_search
-				position absolute
-				left 15px
-				top 50%
-				transform translateY(-50%)
-				width 10%
-				height 50%
-				.icon-sousuo
-					font-size 25px
-					color #fff
-			.header_title
-				position absolute
-				top 50%
-				left 50%
-				transform translate(-50%, -50%)
-				width 50%
-				color #fff
-				text-align center
-				.header_title_text
-					font-size 20px
-					color #fff
-					display block
-			.header_login
-				font-size 14px
-				color #fff
-				position absolute
-				right 15px
-				top 50%
-				transform translateY(-50%)
-			.header_login_text
-				color #fff
 		.profile-number
+			height 80px
 			margin-top 35.5px
+			text-align center
+			background #02a774
 			.profile-link
 				clearFix()
-				height 40px
+				width 30%
+				height 45px
+				background #02a774
 				position relative
 				display block
-				background #02a774
-				padding 20px 10px
-				.profile_image
-					float left
-					width 60px
-					height 60px
-					border-radius 50%
-					overflow hidden
-					vertical-align top
-				.icon-person
-					background #e4e4e4
-					font-size 62px
+				margin-left 31%
+				padding 10px 10px
 			.user-info
-				float left
-				margin-top 8px
-				margin-left 35px
-				p
-					font-weight: 700
+				margin-left 6%
+				width 100%
+				height 120%
+				text-align center
+				// background-color red
+				.user-info-top
+					width 100%
+					height 60%
+					line-height 35px
 					font-size 18px
 					color #fff
-				&.user-info-top
-					padding-bottom 8px
-				.user-icon
-					display inline-block
-					margin-left -15px
-					margin-right 5px
-					width 20px
-					height 20px
-					.icon-mobile
-						font-size 30px
-						vertical-align text-top
+					// background-color black
 				.icon-mobile-number
-					margin-left -25px
+					width 100%
+					height 40%
+					line-height 20px
+					text-align center
+					// background-color blue
 					font-size 14px
 					color #fff
 			.arrow

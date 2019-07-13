@@ -40,7 +40,6 @@
 
 <style lang="stylus" rel='stylesheet/stylus'>
 	@import "../../common/stylus/mixins.styl"
-
 	.footer_guide
 		top-border-1px(#e4e4e4)
 		position fixed
@@ -51,6 +50,7 @@
 		width 100%
 		height 50px
 		display flex
+		background-color #ffffff
 		a
 			text-decoration none
 		.guide_item

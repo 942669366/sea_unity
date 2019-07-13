@@ -3,23 +3,22 @@
             
         <div class="loginInner">
         <a href="javascript:" class="go_back" @click="$router.back()">
-            <i class="iconfont icon-jiantou2">返回</i>
+            <i class="iconfont icon-jiantou2"><img src="../../../src/pages/Login/images/black.png"/></i>
         </a>
         <div class="login_header">
             <h2 class="login_logo">海团外卖</h2>
             <div class="login_header_title">
-            <a href="javascript:;" :class="{on: loginWay}" @click="loginWay=true">短信登录</a>
-            <a href="javascript:;" :class="{on: !loginWay}" @click="loginWay=false">密码登录</a>
+            <a href="javascript:;" >短信登录</a>
+            <a href="javascript:;" >密码登录</a>
             </div>
         </div>
         <div class="login_content">
             <form @submit.prevent="login">
             <div :class="{on: loginWay}">
                 <section class="login_message">
-                <input type="tel" maxlength="11" placeholder="手机号" v-model="phone">
-                <button :disabled="!rightPhone" class="get_verification"
-                        :class="{right_phone: rightPhone}" @click.prevent="getCode">
-                    {{computeTime>0 ? `已发送(${computeTime}s)` : '获取验证码'}}
+                <input type="tel" maxlength="11" placeholder="手机号">
+                <button class="get_verification">
+                    
                 </button>
                 </section>
                 <section class="login_verification">
@@ -40,7 +39,6 @@
                     <input type="password" maxlength="8" placeholder="密码" v-else v-model="pwd">
                     <div class="switch_button" :class="showPwd?'on':'off'" @click="showPwd=!showPwd">
                     <div class="switch_circle" :class="{right: showPwd}"></div>
-                    <span class="switch_text">{{showPwd ? 'abc' : '...'}}</span>
                     </div>
                 </section>
                 <section class="login_message">
@@ -67,6 +65,8 @@ export default {
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
   @import "../../common/stylus/mixins.styl"
+  a
+    text-decoration none
   .loginContainer
     width 100%
     height 100%
@@ -75,9 +75,15 @@ export default {
       padding-top 60px
       width 80%
       margin 0 auto
-      a
-        color #858585
-        text-decoration none
+      .go_back
+            position absolute
+            top 15px
+            left 15px
+            width 35px
+            height 35px
+        .iconfont img
+          width 35px
+          height 35px
       .login_header
         .login_logo
           font-size 40px
@@ -196,15 +202,7 @@ export default {
           margin-top 20px
           text-align center
           color #999
-        .go_back
-            position absolute
-            top 5px
-            left 5px
-            width 30px
-            height 30px
-            background-color red
-        >.iconfont
-            font-size 20px
-            color red
+        
+          
 
 </style>
